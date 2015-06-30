@@ -25,7 +25,6 @@
 unify(A, B, Mgu) :- help(A, B, [], Mgu).                                %1
 
 help(A, B, S, Mgu) :- substitute(A, S, AS),                             %1
-	substitute(B, S, BS),
 	help_helper(A, B, S, AS, BS, Mgu).
 
 help_helper(_A, _B, S, AS, AS, S) :- !.                                   %1
